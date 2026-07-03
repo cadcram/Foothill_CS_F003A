@@ -66,7 +66,7 @@ def run():
     rate = get_number_with_regex("Enter the annual interest rate of account in percent "
                                  "(i.e 5 for 5% or 2.5 for 2.5%): ")
     
-    number_compounded = get_number_with_regex("Enter the number of times per year that the interest is compounded "
+    number_compounded = get_number_with_regex("Enter the number of times per year that the interest is compounded \n"
                                                "(i.e. if interest is compounded monthly, enter 12. If interest is compounded quarterly, 4.): ")
     
     time_in_account = get_number_with_regex("Enter number of years the account will be left to earn interest: ")
