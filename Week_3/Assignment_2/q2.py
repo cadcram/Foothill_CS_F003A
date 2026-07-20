@@ -6,7 +6,9 @@
 #####################################################
 
 def get_integer_greater_than_one(prompt: str) -> int:
-    """Keeps prompting the user until they enter an integer greater than 1."""
+    """
+    Keeps prompting the user until they enter an integer greater than 1.
+    """
     while True:
         try:
             value = int(input(prompt))
@@ -18,7 +20,9 @@ def get_integer_greater_than_one(prompt: str) -> int:
             print("Error: That is not a valid integer.")
 
 def is_prime(num: int) -> bool:
-    """Determines if a number is prime using trial division up to sqrt(num)."""
+    """
+    Determines if a number is prime using division up to sqrt(num).
+    """
     if num <= 1:
         return False
     if num <= 3:
@@ -33,15 +37,10 @@ def is_prime(num: int) -> bool:
 
 def display_prime_status(num: int):
     """
-    Accepts an integer, determines its prime status, 
-    and displays the result directly.
+    Accepts an integer and displays it only if it is a prime number.
     """
     if is_prime(num):
-        status = "Prime"
-    else:
-        status = "Not Prime"
-        
-    print(f"{num:^8}|{status:^20}")
+        print(num)
 
 def run():
     """
@@ -56,9 +55,9 @@ def run():
         num_list.append(i)
     
     # Header formatting
-    print("-" * 30)
-    print(f"{' Number':<8}| {'Prime or Not Prime':<20}")
-    print("-" * 30)
+    print("-" * 40)
+    print(f"Prime numbers from 2 to {limit}:")
+    print("-" * 40)
 
     # Step through the list and pass each element to the display function
     for num in num_list:
